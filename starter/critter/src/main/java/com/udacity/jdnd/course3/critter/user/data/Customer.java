@@ -16,17 +16,12 @@ public class Customer extends User {
     @Column(length = 500)
     private String notes;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    //https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
+    @OneToMany(
+            mappedBy = "customer",
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
     private List<Pet> pets;
-
-    public Customer() {
-    }
-
-    public Customer(String phoneNumber, String notes, List<Pet> pets) {
-        this.phoneNumber = phoneNumber;
-        this.notes = notes;
-        this.pets = pets;
-    }
 
     public String getPhoneNumber() {
         return phoneNumber;

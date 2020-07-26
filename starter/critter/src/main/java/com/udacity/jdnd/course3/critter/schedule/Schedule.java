@@ -36,13 +36,6 @@ public class Schedule {
     @ElementCollection(targetClass = EmployeeSkill.class)
     private Set<EmployeeSkill> activities;
 
-    public Schedule() {
-    }
-
-    public Schedule(LocalDate date) {
-        this.date = date;
-    }
-
     public Long getId() {
         return id;
     }

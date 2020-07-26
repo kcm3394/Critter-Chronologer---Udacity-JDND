@@ -20,23 +20,13 @@ public class Pet {
     @Nationalized
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id")
+    @ManyToOne(fetch = FetchType.LAZY)
     private Customer customer;
 
     private LocalDate birthDate;
+
+    @Column(length = 500)
     private String notes;
-
-    public Pet() {
-    }
-
-    public Pet(PetType type, String name, Customer customer, LocalDate birthDate, String notes) {
-        this.type = type;
-        this.name = name;
-        this.customer = customer;
-        this.birthDate = birthDate;
-        this.notes = notes;
-    }
 
     public Long getId() {
         return id;

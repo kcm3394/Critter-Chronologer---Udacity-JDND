@@ -19,14 +19,6 @@ public class Employee extends User {
     @ElementCollection(targetClass = DayOfWeek.class)
     private Set<DayOfWeek> daysAvailable;
 
-    public Employee() {
-    }
-
-    public Employee(Set<EmployeeSkill> skills, Set<DayOfWeek> daysAvailable) {
-        this.skills = skills;
-        this.daysAvailable = daysAvailable;
-    }
-
     public Set<EmployeeSkill> getSkills() {
         return skills;
     }
