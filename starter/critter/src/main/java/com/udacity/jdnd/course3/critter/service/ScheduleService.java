@@ -3,10 +3,12 @@ package com.udacity.jdnd.course3.critter.service;
 import com.udacity.jdnd.course3.critter.repository.ScheduleRepository;
 import com.udacity.jdnd.course3.critter.schedule.Schedule;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class ScheduleService {
 
     private final ScheduleRepository scheduleRepository;

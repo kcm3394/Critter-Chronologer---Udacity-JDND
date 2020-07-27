@@ -6,6 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
+/**
+ * MappedSuperclass because you do not need to query Users, just its child classes.
+ */
+
 @MappedSuperclass
 public class User {
 

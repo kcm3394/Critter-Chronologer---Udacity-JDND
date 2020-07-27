@@ -5,6 +5,9 @@ import com.udacity.jdnd.course3.critter.user.EmployeeSkill;
 import java.time.LocalDate;
 import java.util.Set;
 
+/**
+ * Does not need to be an entity since we do not need to persist it to the database.
+ */
 public class EmployeeRequest {
     private Set<EmployeeSkill> skills;
     private LocalDate date;
